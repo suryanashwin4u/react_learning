@@ -1,11 +1,12 @@
 import React from "react";
+import Images from './Images';
 
 function Card(props){
     return(
         <>
             <div className="">
                 <div className="">
-                    <img className="" src="{props.imgsrc}" alt="myPic"></img>
+                <Images imgsrc={props.imgsrc}/>
                     <div className="">
                         <span className="">{props.title}</span>
                         <h3 className="">{props.sname}</h3>

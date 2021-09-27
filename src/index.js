@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 // importing css
-// import "./index.css";
+import "./index.css";
 
 // importing Heading.jsx file as component 
 // import Heading from "./Heading";
@@ -29,7 +29,10 @@ import ReactDom from 'react-dom';
 // to use render method of react-dome module 
 // import add from './Calc';
 // import {sub,mul,div} from './Calc';
-import Calculate from './Calculate.jsx';
+// import Calculate from './Calculate.jsx';
+
+// importing arr_object.jsx
+import arr_object from "./arr_object";
 
 // we can write it like this
 // var React = require('react');
@@ -159,5 +162,76 @@ import Calculate from './Calculate.jsx';
 // );
 
 
+// function Card(props){
+//     return(
+//         <>
+//             <div className="">
+//                 <div className="">
+//                     <img className="" src="{props.imgsrc}" alt="myPic"></img>
+//                     <div className="">
+//                         <span className="">{props.title}</span>
+//                         <h3 className="">{props.sname}</h3>
+//                         <a href="{props.link}">
+//                             <button>click here</button>
+//                         </a>
+//                     </div>
+//                 </div>
+//             </div>
+//         </>
+//     );
+// }
+
+
+// ReactDom.render(
+//     <>
+//         <Card imgsrc={arr_object[0].imgsrc} title={arr_object[0].title} sname={arr_object[0].sname} link={arr_object[0].link}/>
+//     </>,
+//     document.getElementById('root')
+// );
+     
 // making a calculator
-ReactDom.render(<Calculate/>,document.getElementById('root'));
+// ReactDom.render(<Calculate/>,document.getElementById('root'));
+
+
+function Card(props){
+    return(
+        <>
+            <div className="">
+                <div className="">
+                    <img className="" src="{props.imgsrc}" alt="myPic"></img>
+                    <div className="">
+                        <span className="">{props.title}</span>
+                        <h3 className="">{props.sname}</h3>
+                        <a href="{props.link}">
+                            <button>click here</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+// function many_cards(val){
+// return(
+//     <Card imgsrc={val.imgsrc} title={val.title} sname={val.sname} link={val.link}/>
+// );
+// }
+
+ReactDom.render(
+    <>
+      <h1>hello cards</h1>
+      {/* {arr_object.map(many_cards)} */}
+      {
+           arr_object.map(function many_cards(val){
+            return( <Card key={val.id} imgsrc={val.imgsrc} title={val.title} sname={val.sname} link={val.link}/> );
+          }
+        )
+      }
+    </>,
+document.getElementById('root')
+);
+
+
+
+

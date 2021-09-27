@@ -1,0 +1,31 @@
+const arr_object=[
+{
+    id:"1",
+    sname:"1",
+    imgsrc:"https://www.w2alkjsdflkas.com",
+    title:"netalskdjfasdjf",
+    links:"klajsdfkljasldj"
+},
+{   
+    id:"2",
+    sname:"2",
+    imgsrc:"https://www.w2alkjsdflkas.com",
+    title:"netalskdjfasdjf",
+    links:"klajsdfkljasldj"
+},
+{   
+    id:"3",
+    sname:"3",
+    imgsrc:"https://www.w2alkjsdflkas.com",
+    title:"netalskdjfasdjf",
+    links:"klajsdfkljasldj"
+},
+{   
+    id:"4",
+    sname:"4",
+    imgsrc:"https://www.w2alkjsdflkas.com",
+    title:"netalskdjfasdjf",
+    links:"klajsdfkljasldj"
+}
+];
+export default arr_object;
